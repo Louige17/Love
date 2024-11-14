@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Love Letter</title>
+    <!-- Include Google Font for Indie Flower -->
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Indie Flower', cursive;
+            background-image: url('3.jpg'); /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            color: #333;
+        }
+
+        h1, h2 {
+            font-family: 'Indie Flower', cursive;
+            color: #b85c5c;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            margin-top: 50px;
+        }
+
+        /* Styling for the love letter background */
+        .letter-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background-image: url('4.jpg'); /* Replace with your letter background image */
+            background-size: cover;
+            background-position: center;
+            border: 2px solid #b85c5c;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-size: 1.2em;
+            line-height: 1.8;
+            position: relative;
+            box-sizing: border-box;
+            color: #000000; /* White text color to stand out on the image */
+        }
+
+        .letter-container::before {
+            content: "💌";
+            font-size: 4em;
+            position: absolute;
+            top: -35px;
+            right: 20px;
+        }
+
+        .letter-content {
+            margin-top: 30px;
+        }
+
+        /* Styling for images */
+        .photos {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .photos img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .photos img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Video container */
+        .video-container {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-container video {
+            width: 560px;
+            height: 315px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Love note styling */
+        .love-note {
+            font-size: 1.3em;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 30px;
+            color: #b85c5c;
+            border-top: 2px dashed #b85c5c;
+            padding-top: 20px;
+        }
+
+        /* Start button */
+        #startButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffefea;
+        }
+
+        #startButton button {
+            font-size: 1.5em;
+            padding: 15px 30px;
+            background-color: #b85c5c;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #startButton button:hover {
+            background-color: #d17878;
+        }
+
+        /* Hide the scrapbook content initially */
+        #scrapbookContent {
+            display: none;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+    </style>
+</head>
+<body>
+    <div id="startButton">
+        <button onclick="showScrapbook()">Click Me </button>
+    </div>
+
+    <div id="scrapbookContent" class="letter-container">
+        <h1>Happy Monthsary, Bby</h1>
+
+        <div class="letter-content">
+            <p>Happy 4th monthsary to the person who fills my heart with love and joy. Another month, another milestone, and another reason to celebrate our love. I am so lucky to have you as my boyfriend.  💖</p>
+            <p>I wanted to take a moment to express how much you mean to me. Our journey together has been incredible, and I can’t wait for all the adventures we have ahead.</p>
+            <p>Every time I look at you, I fall in love all over again. 💕</p>
+        </div>
+
+        <h2>Our Beautiful Memories</h2>
+        <div class="photos">
+            <img src="5.jpg" alt="Memory 1">
+            <img src="6.jpeg" alt="Memory 2">
+            <img src="7.jpeg" alt="Memory 3">
+            <img src="8.jpeg" alt="Memory 4">
+        </div>
+
+        <div class="video-container">
+            <!-- Replace with your video file path -->
+            <video controls>
+                <source src="9.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="love-note">
+            <p>"My love for you is boundless, and it grows more with each passing day. I am so incredibly grateful to have you in my life. Here's to many more memories and years together!" 💞</p>
+        </div>
+    </div>
+
+    <script>
+        function showScrapbook() {
+            document.getElementById('startButton').style.display = 'none';
+            const scrapbook = document.getElementById('scrapbookContent');
+            scrapbook.style.display = 'block';
+            scrapbook.style.opacity = '1';
+        }
+    </script>
+</body>
+</html>
